@@ -1,0 +1,4 @@
+511 Collision
+520 Shuddering
+542 Ruin
+551 Hellish

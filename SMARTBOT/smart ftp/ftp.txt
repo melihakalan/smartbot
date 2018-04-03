@@ -1,0 +1,4 @@
+ FTP-Server  ftp://koggok.ko.funpic.org 
+
+ Username  koggok 
+    pass   koggok34

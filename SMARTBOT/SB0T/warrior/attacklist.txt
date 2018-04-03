@@ -1,0 +1,26 @@
+001 Stroke
+003 Slash
+005 Crash
+007 Defense
+009 Piercing
+010 Whipping
+500 Hash
+505 Hoodwink
+510 Shear
+515 Pierce
+520 Leg cutting
+525 Carving
+530 Sever
+535 Prick
+540 Multiple shock
+545 Cleave
+550 Mangling
+555 Thrust
+557 Sword Aura
+560 Sword Dancing
+802 Scream
+570 Howling Sword
+575 Blooding
+815 Exceed Break
+580 Hell Blade
+820 Shock Stun

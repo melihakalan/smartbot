@@ -1,0 +1,4 @@
+611 Wrath
+620 Wield
+641 Harsh
+650 Collapse

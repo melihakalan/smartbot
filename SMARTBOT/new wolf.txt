@@ -1,0 +1,32 @@
+Public Function ClassOku()
+Dim a As Long
+a = ReadLong(KO_ADR_CHR + KO_OFF_CLASS)
+ClassOku = a
+End Function
+
+
+Public Sub Wolf()
+    Dim pBytes() As Byte
+    Dim pStr As String
+    Dim m_SkillID As String
+    Dim mXZY As String
+    Dim mX As Single, mY As Single, mZ As Single
+
+    mX = ReadFloat(ReadLong(KO_PTR_CHR) + &HB4)
+    mY = ReadFloat(ReadLong(KO_PTR_CHR) + &HBC)
+    mZ = ReadFloat(ReadLong(KO_PTR_CHR) + &HB8)
+    
+    If Form2.roglist2.Selected(0) Then
+    m_SkillID = "030"
+    End If
+    mXZY = Left$(AlignDWORD(CLng(Fix(mX))), 4) & Left$(AlignDWORD(CLng(Fix(mZ))), 4) & Left$(AlignDWORD(CLng(Fix(mY))), 4)
+    m_SkillID = AlignDWORD(CLng(ClassOku & "030"))
+    
+    pStr = "3101" & m_SkillID & GetCharID & "FFFF" & mXZY & "0000000000001100"
+    ConvHEX2ByteArray pStr, pBytes
+    SendPackets pBytes
+    
+    pStr = "3103" & m_SkillID & GetCharID & "FFFF" & mXZY & "000000000000"
+    ConvHEX2ByteArray pStr, pBytes
+    SendPackets pBytes
+End Sub
